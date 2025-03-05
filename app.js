@@ -155,14 +155,23 @@ function activarEdicionEnLinea(nombreSpan, index) {
 
 function editarAmigo(index, nuevoNombre) {
 	if (nuevoNombre !== null && nuevoNombre.trim() !== '') {
+		const nombreAntiguo = amigos[index];
 		amigos[index] = nuevoNombre.trim();
 		actualizarListaAmigos();
+
+		mostrarMensaje(
+			`¡El nombre ha sido actualizado de "${nombreAntiguo}" a "${nuevoNombre.trim()}"!`,
+			'exito'
+		);
 	}
 }
 
 function eliminarAmigo(index) {
+	const nombreEliminado = amigos[index];
 	amigos.splice(index, 1);
 	actualizarListaAmigos();
+
+	mostrarMensaje(`¡${nombreEliminado} ha sido eliminado de la lista!`, 'error');
 }
 
 function mostrarModalEdicion(nombre, index) {
