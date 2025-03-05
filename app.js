@@ -12,11 +12,7 @@ function agregarAmigo() {
 	}
 
 	amigos.push(nombre);
-
-	const listaAmigos = document.getElementById('listaAmigos');
-	const nuevoAmigo = document.createElement('li');
-	nuevoAmigo.textContent = nombre;
-	listaAmigos.appendChild(nuevoAmigo);
+	actualizarListaAmigos();
 
 	nombreInput.value = '';
 	nombreInput.focus();
@@ -40,3 +36,71 @@ document.getElementById('amigo').addEventListener('keypress', function (event) {
 		agregarAmigo();
 	}
 });
+
+function crearItemAmigo(nombre, index) {
+	const nuevoAmigo = document.createElement('li');
+	nuevoAmigo.dataset.index = index;
+	nuevoAmigo.className = 'amigo-item';
+
+	const nombreSpan = document.createElement('span');
+	nombreSpan.textContent = nombre;
+	nombreSpan.className = 'amigo-nombre';
+
+	const botonesContainer = document.createElement('div');
+	botonesContainer.className = 'amigo-botones';
+
+	const botonEditar = document.createElement('button');
+	botonEditar.innerHTML = '<i class="fas fa-edit"></i>';
+	botonEditar.className = 'boton-editar';
+	botonEditar.onclick = function () {
+		editarAmigo(index);
+	};
+
+	const botonEliminar = document.createElement('button');
+	botonEliminar.innerHTML = '<i class="fas fa-trash"></i>';
+	botonEliminar.className = 'boton-eliminar';
+	botonEliminar.onclick = function () {
+		eliminarAmigo(index);
+	};
+
+	botonesContainer.appendChild(botonEditar);
+	botonesContainer.appendChild(botonEliminar);
+	nuevoAmigo.appendChild(nombreSpan);
+	nuevoAmigo.appendChild(botonesContainer);
+
+	return nuevoAmigo;
+}
+
+function editarAmigo(index) {
+	const nuevoNombre = prompt('Editar nombre:', amigos[index]);
+
+	if (nuevoNombre !== null && nuevoNombre.trim() !== '') {
+		amigos[index] = nuevoNombre.trim();
+		actualizarListaAmigos();
+	}
+}
+
+function eliminarAmigo(index) {
+	if (confirm('¿Estás seguro de que deseas eliminar este amigo?')) {
+		amigos.splice(index, 1);
+		actualizarListaAmigos();
+	}
+}
+
+function actualizarListaAmigos() {
+	const listaAmigos = document.getElementById('listaAmigos');
+	listaAmigos.innerHTML = '';
+
+	amigos.forEach((amigo, index) => {
+		const nuevoItem = crearItemAmigo(amigo, index);
+		listaAmigos.appendChild(nuevoItem);
+	});
+}
+
+function agregarEstilos() {
+	const estiloCSS = document.createElement('style');
+	estiloCSS.textContent = `
+        
+    `;
+	document.head.appendChild(estiloCSS);
+}
