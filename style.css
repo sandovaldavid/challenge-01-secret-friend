@@ -132,6 +132,7 @@ ul {
 	font-family: 'Inter', sans-serif;
 	font-size: 18px;
 	margin: 20px 0;
+	width: 30vw;
 }
 
 .result-list {
@@ -468,5 +469,283 @@ ul {
 	100% {
 		transform: translateY(100vh) rotate(720deg);
 		opacity: 0;
+	}
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 1024px) {
+	.header-banner {
+		padding: 30px 0 0;
+	}
+
+	.main-title {
+		font-size: 42px;
+	}
+
+	.section-title {
+		font-size: 30px;
+		padding: 0 15px;
+	}
+
+	.input-wrapper {
+		max-width: 500px;
+		padding: 0 15px;
+	}
+
+	.button-container {
+		width: 250px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.header-banner {
+		padding: 20px 0 0;
+		flex-direction: column;
+	}
+
+	.header-banner img {
+		max-width: 60vw;
+		margin-top: 10px;
+	}
+
+	.main-title {
+		font-size: 36px;
+		text-align: center;
+	}
+
+	.section-title {
+		font-size: 24px;
+		padding: 0 10px;
+	}
+
+	ul {
+		width: 80vw;
+	}
+
+	.input-section {
+		border-radius: 40px 40px 0 0;
+		padding: 15px;
+	}
+
+	.input-wrapper {
+		max-width: 100%;
+	}
+
+	.button-container {
+		width: 100%;
+		max-width: 300px;
+	}
+
+	.button-draw {
+		padding: 10px 20px;
+		justify-content: center;
+	}
+
+	.button-draw img {
+		margin-right: 20px;
+	}
+
+	/* Ajustes para modales */
+	.modal-content {
+		width: 90%;
+		padding: 15px;
+	}
+
+	.resultado-mensaje {
+		font-size: 20px;
+	}
+
+	.resultado-mensaje strong {
+		font-size: 24px;
+	}
+
+	/* Ajustes para mensajes flotantes */
+	.mensaje-flotante {
+		max-width: 280px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.main-content {
+		height: 100%;
+	}
+
+	.header-banner {
+		flex: 30%;
+		padding: 15px 0 0;
+	}
+
+	.header-banner img {
+		max-width: 60vw;
+	}
+
+	.input-section {
+		flex: 70%;
+		border-radius: 30px 30px 0 0;
+		padding: 15px 10px;
+	}
+
+	.main-title {
+		font-size: 28px;
+	}
+
+	.section-title {
+		font-size: 20px;
+		margin: 5px 0;
+		padding: 0 5px;
+	}
+
+	.input-wrapper {
+		flex-direction: column;
+		margin-top: 10px;
+	}
+
+	.input-name {
+		width: 100%;
+		border-radius: 20px;
+		margin-bottom: 10px;
+	}
+
+	.button-add {
+		border-radius: 20px;
+		width: 100%;
+	}
+
+	button {
+		padding: 10px 15px;
+	}
+
+	.button-draw {
+		font-size: 14px;
+		padding: 8px 15px;
+	}
+
+	.button-draw img {
+		width: 24px;
+		margin-right: 15px;
+	}
+
+	/* Ajustes de elementos de lista */
+	.amigo-item {
+		padding: 8px 12px;
+	}
+
+	.amigo-nombre {
+		font-size: 16px;
+		max-width: 150px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	.amigo-botones {
+		gap: 5px;
+		margin-left: 10px;
+	}
+
+	.boton-editar,
+	.boton-eliminar {
+		padding: 5px;
+		font-size: 12px;
+	}
+
+	/* Ajustes para modales */
+	.modal-content {
+		width: 95%;
+		padding: 12px;
+	}
+
+	.modal h2 {
+		font-size: 18px;
+	}
+
+	.resultado-icono {
+		font-size: 36px;
+	}
+
+	.resultado-mensaje {
+		font-size: 16px;
+	}
+
+	.resultado-mensaje strong {
+		font-size: 20px;
+	}
+
+	.modal-button {
+		padding: 8px 15px;
+		font-size: 14px;
+	}
+
+	/* Ajustes para mensajes flotantes */
+	.mensaje-flotante {
+		max-width: 250px;
+		top: 10px;
+		right: 10px;
+		padding: 10px 30px 10px 15px;
+		font-size: 14px;
+	}
+
+	/* Estilos para edición inline */
+	.input-edicion-inline {
+		font-size: 16px;
+		padding: 4px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.main-title {
+		font-size: 24px;
+	}
+
+	.section-title {
+		font-size: 18px;
+	}
+
+	.amigo-nombre {
+		max-width: 120px;
+	}
+
+	.boton-editar,
+	.boton-eliminar {
+		padding: 4px;
+		font-size: 10px;
+	}
+
+	.mensaje-flotante {
+		max-width: 230px;
+		font-size: 12px;
+	}
+}
+
+/* Orientación horizontal en móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+	.main-content {
+		flex-direction: row;
+	}
+
+	.header-banner {
+		flex: 30%;
+		padding: 0 0 0 20px;
+		flex-direction: column;
+	}
+
+	.input-section {
+		flex: 70%;
+		border-radius: 64px 0 0 0;
+		padding: 15px;
+		overflow-y: auto;
+		max-height: 100vh;
+	}
+
+	.header-banner img {
+		max-width: 120px;
+	}
+
+	.main-title {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.section-title {
+		font-size: 20px;
 	}
 }
