@@ -160,3 +160,59 @@ ul {
 .button-draw:hover {
 	background-color: var(--color-button-hover);
 }
+
+/* Estilos de la lista de amigos */
+
+.amigo-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 16px;
+	margin: 8px 0;
+	background-color: var(--color-white);
+	border-radius: 12px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.amigo-item:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.amigo-nombre {
+	font-family: 'Inter', sans-serif;
+	font-size: 18px;
+	color: var(--color-text);
+}
+
+.amigo-botones {
+	display: flex;
+	gap: 8px;
+	margin-left: 2rem;
+}
+
+.boton-editar,
+.boton-eliminar {
+	padding: 0.5rem 0.5rem;
+	font-size: 10px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+.boton-editar {
+	background-color: var(--color-primary);
+	color: var(--color-white);
+	border: 1px solid var(--color-primary);
+}
+
+.boton-eliminar {
+	background-color: #ff5252;
+	color: var(--color-white);
+	border: 1px solid #ff5252;
+}
+
+.boton-editar:hover,
+.boton-eliminar:hover {
+	opacity: 0.9;
+}
