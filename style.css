@@ -375,3 +375,98 @@ ul {
 		opacity: 0;
 	}
 }
+
+/* Modal Sorteo stykes */
+.modal-sorteo {
+	text-align: center;
+	max-width: 400px;
+}
+
+.resultado-sorteo {
+	margin: 30px 0;
+	padding: 20px;
+	background-color: var(--color-secondary);
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resultado-icono {
+	font-size: 48px;
+	color: var(--color-primary);
+	margin-bottom: 15px;
+	display: block;
+	animation: pulso 1.5s infinite alternate;
+}
+
+.resultado-mensaje {
+	font-size: 22px;
+	color: var(--color-text);
+	margin-bottom: 0;
+}
+
+.resultado-mensaje strong {
+	font-size: 28px;
+	color: var(--color-primary);
+	display: block;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+.modal.salida {
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
+}
+
+@keyframes pulso {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+@keyframes aparecer {
+	0% {
+		opacity: 0;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Confetti styles */
+
+.confetti-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 1050;
+}
+
+.confeti {
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: -10px;
+	animation: caida linear forwards;
+}
+
+@keyframes caida {
+	0% {
+		transform: translateY(0) rotate(0deg);
+		opacity: 1;
+	}
+	70% {
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(100vh) rotate(720deg);
+		opacity: 0;
+	}
+}
