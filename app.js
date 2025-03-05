@@ -2,17 +2,64 @@
 
 let amigos = [];
 
+function mostrarMensaje(mensaje, tipo) {
+	const mensajeAnterior = document.querySelector('.mensaje-flotante');
+	if (mensajeAnterior) {
+		mensajeAnterior.remove();
+	}
+
+	const nuevoMensaje = document.createElement('div');
+	nuevoMensaje.className = `mensaje mensaje-flotante mensaje-${tipo}`;
+	nuevoMensaje.textContent = mensaje;
+
+	const icono = document.createElement('i');
+	icono.className = tipo === 'error' ? 'fas fa-exclamation-circle' : 'fas fa-check-circle';
+	nuevoMensaje.prepend(icono);
+
+	const botonCerrar = document.createElement('span');
+	botonCerrar.innerHTML = '&times;';
+	botonCerrar.className = 'cerrar-mensaje';
+	botonCerrar.onclick = function () {
+		nuevoMensaje.classList.add('ocultar');
+		setTimeout(() => {
+			if (nuevoMensaje.parentNode) {
+				nuevoMensaje.remove();
+			}
+		}, 500);
+	};
+	nuevoMensaje.appendChild(botonCerrar);
+
+	document.body.appendChild(nuevoMensaje);
+
+	setTimeout(() => {
+		nuevoMensaje.classList.add('mostrar');
+	}, 10);
+
+	setTimeout(() => {
+		if (nuevoMensaje.parentNode) {
+			nuevoMensaje.classList.add('ocultar');
+			setTimeout(() => {
+				if (nuevoMensaje.parentNode) {
+					nuevoMensaje.remove();
+				}
+			}, 500);
+		}
+	}, 5000);
+}
+
 function agregarAmigo() {
 	const nombreInput = document.getElementById('amigo');
 	const nombre = nombreInput.value.trim();
 
 	if (nombre === '') {
-		alert('Por favor, ingrese un nombre válido');
+		mostrarMensaje('Por favor, ingrese un nombre válido', 'error');
 		return;
 	}
 
 	amigos.push(nombre);
 	actualizarListaAmigos();
+
+	mostrarMensaje(`¡${nombre} ha sido añadido a la lista!`, 'exito');
 
 	nombreInput.value = '';
 	nombreInput.focus();
@@ -20,7 +67,7 @@ function agregarAmigo() {
 
 function sortearAmigo() {
 	if (amigos.length === 0) {
-		alert('Debe agregar al menos un amigo a la lista');
+		mostrarMensaje('Debe agregar al menos un amigo a la lista', 'error');
 		return;
 	}
 
