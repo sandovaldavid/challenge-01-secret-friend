@@ -71,11 +71,84 @@ function sortearAmigo() {
 		return;
 	}
 
+	if (amigos.length < 2) {
+		mostrarMensaje('Se necesitan al menos 2 amigos para realizar un sorteo', 'error');
+		return;
+	}
+
 	const indiceAleatorio = Math.floor(Math.random() * amigos.length);
 	const amigoSeleccionado = amigos[indiceAleatorio];
 
-	const resultado = document.getElementById('resultado');
-	resultado.innerHTML = `<li>¡Tu amigo secreto es: ${amigoSeleccionado}!</li>`;
+	mostrarModalSorteo(amigoSeleccionado);
+}
+
+function mostrarModalSorteo(amigoSeleccionado) {
+	const modal = document.createElement('div');
+	modal.className = 'modal';
+
+	const modalContent = document.createElement('div');
+	modalContent.className = 'modal-content modal-sorteo';
+
+	const header = document.createElement('h2');
+	header.textContent = '¡Resultado del Sorteo!';
+
+	const resultadoContainer = document.createElement('div');
+	resultadoContainer.className = 'resultado-sorteo';
+
+	const icono = document.createElement('i');
+	icono.className = 'fas fa-gift resultado-icono';
+
+	const mensaje = document.createElement('p');
+	mensaje.className = 'resultado-mensaje';
+	mensaje.innerHTML = `Tu amigo secreto es:<br><strong>${amigoSeleccionado}</strong>`;
+
+	const closeButton = document.createElement('button');
+	closeButton.textContent = 'Aceptar';
+	closeButton.className = 'modal-button save-button';
+	closeButton.onclick = function () {
+		const resultado = document.getElementById('resultado');
+		resultado.innerHTML = `<li>¡Tu amigo secreto es: ${amigoSeleccionado}!</li>`;
+
+		modal.classList.add('salida');
+		setTimeout(() => {
+			document.body.removeChild(modal);
+		}, 300);
+	};
+
+	resultadoContainer.appendChild(icono);
+	resultadoContainer.appendChild(mensaje);
+	modalContent.appendChild(header);
+	modalContent.appendChild(resultadoContainer);
+	modalContent.appendChild(closeButton);
+	modal.appendChild(modalContent);
+
+	document.body.appendChild(modal);
+
+	crearConfeti();
+}
+
+function crearConfeti() {
+	const confettiContainer = document.createElement('div');
+	confettiContainer.className = 'confetti-container';
+	document.body.appendChild(confettiContainer);
+
+	const colores = ['#FFC700', '#FF0000', '#2E3191', '#41EAD4', '#FBFF12'];
+
+	for (let i = 0; i < 50; i++) {
+		const confeti = document.createElement('div');
+		confeti.className = 'confeti';
+		confeti.style.backgroundColor = colores[Math.floor(Math.random() * colores.length)];
+		confeti.style.left = Math.random() * 100 + 'vw';
+		confeti.style.animationDelay = Math.random() * 3 + 's';
+		confeti.style.animationDuration = Math.random() * 2 + 3 + 's';
+		confettiContainer.appendChild(confeti);
+	}
+
+	setTimeout(() => {
+		if (confettiContainer.parentNode) {
+			confettiContainer.remove();
+		}
+	}, 5000);
 }
 
 document.getElementById('amigo').addEventListener('keypress', function (event) {
