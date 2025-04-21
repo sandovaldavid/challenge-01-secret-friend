@@ -34,5 +34,40 @@
       "sizes": "180x180",
       "type": "image/png"
     }
-  ]
+  ],
+  "prefer_related_applications": false,
+  "screenshots": [
+    {
+      "src": "./assets/desktop-demo.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "platform": "web",
+      "label": "Pantalla de Amigo Secreto en escritorio"
+    },
+    {
+      "src": "./assets/mobile-demo.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "platform": "web",
+      "label": "Pantalla de Amigo Secreto en móvil"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Crear Sorteo",
+      "short_name": "Sorteo",
+      "description": "Realiza un sorteo de amigo secreto",
+      "url": "./index.html"
+    }
+  ],
+  "color_scheme": "normal",
+  "theme_colors": {
+    "primary": "#4b69fd",
+    "secondary": "#fff9eb",
+    "tertiary": "#c4c4c4",
+    "button": "#fe652b",
+    "button_hover": "#e55720",
+    "text": "#444444",
+    "white": "#ffffff"
+  }
 }
