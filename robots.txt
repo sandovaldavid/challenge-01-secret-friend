@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://amigo-secreto.devsandoval.me/sitemap.xml
+Disallow: /assets/icons/
