@@ -1,73 +1,73 @@
 {
-  "name": "Amigo Secreto",
-  "short_name": "Amigo Secreto",
-  "description": "Aplicación para sortear amigos secretos",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#4b69fd",
-  "theme_color": "#4b69fd",
-  "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "./assets/icons/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
-    },
-    {
-      "src": "./assets/icons/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "./assets/icons/android-chrome-192x192.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "./assets/icons/android-chrome-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "./assets/icons/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    }
-  ],
-  "prefer_related_applications": false,
-  "screenshots": [
-    {
-      "src": "./assets/desktop-demo.png",
-      "sizes": "1280x800",
-      "type": "image/png",
-      "platform": "web",
-      "label": "Pantalla de Amigo Secreto en escritorio"
-    },
-    {
-      "src": "./assets/mobile-demo.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "platform": "web",
-      "label": "Pantalla de Amigo Secreto en móvil"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Crear Sorteo",
-      "short_name": "Sorteo",
-      "description": "Realiza un sorteo de amigo secreto",
-      "url": "./index.html"
-    }
-  ],
-  "color_scheme": "normal",
-  "theme_colors": {
-    "primary": "#4b69fd",
-    "secondary": "#fff9eb",
-    "tertiary": "#c4c4c4",
-    "button": "#fe652b",
-    "button_hover": "#e55720",
-    "text": "#444444",
-    "white": "#ffffff"
-  }
+	"name": "Amigo Secreto",
+	"short_name": "Amigo Secreto",
+	"description": "Aplicación para sortear amigos secretos",
+	"start_url": "./index.html",
+	"display": "standalone",
+	"background_color": "#4b69fd",
+	"theme_color": "#4b69fd",
+	"orientation": "portrait-primary",
+	"icons": [
+		{
+			"src": "./assets/icons/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "./assets/icons/favicon-32x32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "./assets/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./assets/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any maskable"
+		},
+		{
+			"src": "./assets/icons/apple-touch-icon.png",
+			"sizes": "180x180",
+			"type": "image/png"
+		}
+	],
+	"prefer_related_applications": false,
+	"screenshots": [
+		{
+			"src": "./assets/desktop-demo.png",
+			"sizes": "1280x800",
+			"type": "image/png",
+			"platform": "web",
+			"label": "Pantalla de Amigo Secreto en escritorio"
+		},
+		{
+			"src": "./assets/mobile-demo.png",
+			"sizes": "750x1334",
+			"type": "image/png",
+			"platform": "web",
+			"label": "Pantalla de Amigo Secreto en móvil"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "Crear Sorteo",
+			"short_name": "Sorteo",
+			"description": "Realiza un sorteo de amigo secreto",
+			"url": "./index.html"
+		}
+	],
+	"color_scheme": "normal",
+	"theme_colors": {
+		"primary": "#4b69fd",
+		"secondary": "#fff9eb",
+		"tertiary": "#c4c4c4",
+		"button": "#fe652b",
+		"button_hover": "#e55720",
+		"text": "#444444",
+		"white": "#ffffff"
+	}
 }
