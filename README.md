@@ -29,20 +29,7 @@ animaciones atractivas.
 </div>
 
 Para ver la aplicación en funcionamiento, accede a la
-[demo en vivo](https://amigo-secreto.devprojects.tech/).
-
-## 📋 Contenido
-
--   Descripción
--   Características
--   Demo
--   Tecnologías utilizadas
--   Instalación y uso
--   Estructura del proyecto
--   Responsividad
--   Mejoras futuras
--   Contribuciones
--   Licencia
+[demo en vivo](https://amigo-secreto.devsandoval.me).
 
 ## 📝 Descripción
 
@@ -70,7 +57,7 @@ el proceso más entretenido.
 ## 🌐 Demo
 
 Para ver la aplicación en funcionamiento, accede a la
-[demo en vivo](https://amigo-secreto.devprojects.tech/).
+[demo en vivo](https://amigo-secreto.devsandoval.me).
 
 ## 🛠️ Tecnologías utilizadas
 
