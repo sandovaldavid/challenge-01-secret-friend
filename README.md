@@ -5,6 +5,7 @@
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Responsive](https://img.shields.io/badge/Responsive-Yes-green)](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey)](https://opensource.org/licenses/MIT)
+[![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)](https://github.com/sandovaldavid/challenge-01-secret-friend/releases/tag/v1.0.0)
 
 Una aplicación web interactiva para organizar sorteos de amigo secreto con una interfaz amigable y
 animaciones atractivas.
@@ -53,6 +54,13 @@ el proceso más entretenido.
 -   **Diseño responsivo**: Adaptable a diferentes tamaños de pantallas (móviles, tablets y
     escritorio).
 -   **Edición inline**: Edición rápida haciendo doble clic en los nombres.
+
+## 🔄 Versiones
+
+### [v1.0.0](https://github.com/sandovaldavid/challenge-01-secret-friend/releases/tag/v1.0.0) - Abril 21, 2025
+
+Versión inicial con todas las funcionalidades básicas. Consulta las
+[notas de la versión](./release-v1.0.0.md) para más detalles.
 
 ## 🌐 Demo
 
@@ -139,6 +147,7 @@ Las contribuciones son bienvenidas. Para contribuir:
 Este proyecto está bajo la Licencia MIT - mira el archivo LICENSE para detalles.
 
 ---
+
 ## 👨‍💻 Autor
 
 ### [David Sandoval](https://github.com/sandovaldavid)
@@ -147,6 +156,7 @@ Este proyecto está bajo la Licencia MIT - mira el archivo LICENSE para detalles
 -   💼 LinkedIn: [@devsandoval](https://linkedin.com/in/devsandoval)
 -   💻 GitHub: [@sandovaldavid](https://github.com/sandovaldavid)
 -   📧 Email: [contact@devsandoval.me](mailto:contact@devsandoval.me)
+
 ---
 
 Desarrollado por [@sandovaldavid](https://github.com/sandovaldavid)
