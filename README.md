@@ -152,6 +152,15 @@ Las contribuciones son bienvenidas. Para contribuir:
 Este proyecto está bajo la Licencia MIT - mira el archivo LICENSE para detalles.
 
 ---
+## 👨‍💻 Autor
+
+### [David Sandoval](https://github.com/sandovaldavid)
+
+-   🌐 Portafolio: [devsandoval.me](https://devsandoval.me)
+-   💼 LinkedIn: [@devsandoval](https://linkedin.com/in/devsandoval)
+-   💻 GitHub: [@sandovaldavid](https://github.com/sandovaldavid)
+-   📧 Email: [contact@devsandoval.me](mailto:contact@devsandoval.me)
+---
 
 Desarrollado por [@sandovaldavid](https://github.com/sandovaldavid)
 
